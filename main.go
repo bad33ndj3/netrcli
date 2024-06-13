@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"github.com/bgentry/go-netrc/netrc"
 	"log"
 )
@@ -46,13 +47,13 @@ func main() {
 
 	switch part {
 	case PartLogin:
-		log.Println(machine.Login)
+		fmt.Println(machine.Login)
 	case PartPassword:
-		log.Println(machine.Password)
+		fmt.Println(machine.Password)
 	case PartAccount:
-		log.Println(machine.Account)
+		fmt.Println(machine.Account)
 	case PartName:
-		log.Println(machine.Name)
+		fmt.Println(machine.Name)
 	default:
 		log.Fatalf("Invalid part: %s", part)
 	}
