@@ -34,10 +34,6 @@ func main() {
 		log.Fatal("Part is required")
 	}
 
-	if part != PartLogin && part != PartPassword && part != PartAccount && part != PartName {
-		log.Fatalf("Invalid part: %s", part)
-	}
-
 	netrc, err := netrc.ParseFile(path)
 	if err != nil {
 		log.Fatal("Unable to read netrc")
@@ -57,5 +53,7 @@ func main() {
 		log.Println(machine.Account)
 	case PartName:
 		log.Println(machine.Name)
+	default:
+		log.Fatalf("Invalid part: %s", part)
 	}
 }
