@@ -1,6 +1,6 @@
 # netrcli
 
-This Go program extracts specific parts (name, login, password, account) from a `.netrc` file for a given machine.
+This .netrc CLI extracts specific parts (name, login, password, account) from a `.netrc` file for a given machine.
 
 ## Installation
 
